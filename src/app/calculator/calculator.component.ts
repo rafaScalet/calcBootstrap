@@ -26,4 +26,12 @@ export class CalculatorComponent {
   calc(){
     this.result = eval(this.num1 + this.operation + this.num2)
   }
+
+  ce(){
+    this.num1 = 0
+    this.num2 = 0
+    this.result = 0
+    this.operation = ""
+    this.text = ""
+  }
 }
