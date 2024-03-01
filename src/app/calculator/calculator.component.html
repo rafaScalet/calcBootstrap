@@ -26,7 +26,7 @@
         <div>
           <button>Ce</button>
           <button (click)="set('0')">0</button>
-          <button>=</button>
+          <button (click)="calc()">=</button>
           <button (click)="ope('/')">/</button>
         </div>
         <div>
@@ -40,4 +40,4 @@
   </div>
 </div>
 
-<p>text: {{text}} - num1: {{num1}} - num2: {{num2}} - operation: {{operation}}</p>
+<p>text: {{text}} - num1: {{num1}} - num2: {{num2}} - operation: {{operation}} - result: {{result}}</p>
