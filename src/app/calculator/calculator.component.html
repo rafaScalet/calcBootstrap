@@ -9,35 +9,35 @@
           <button (click)="set('1')">1</button>
           <button (click)="set('2')">2</button>
           <button (click)="set('3')">3</button>
-          <button>+</button>
+          <button (click)="ope('+')">+</button>
         </div>
         <div>
           <button (click)="set('4')">4</button>
           <button (click)="set('5')">5</button>
           <button (click)="set('6')">6</button>
-          <button>-</button>
+          <button (click)="ope('-')">-</button>
         </div>
         <div>
           <button (click)="set('7')">7</button>
           <button (click)="set('8')">8</button>
           <button (click)="set('9')">9</button>
-          <button>*</button>
+          <button (click)="ope('*')">x</button>
         </div>
         <div>
           <button>Ce</button>
           <button (click)="set('0')">0</button>
           <button>=</button>
-          <button>/</button>
+          <button (click)="ope('/')">/</button>
         </div>
         <div>
-          <button>^</button>
-          <button>!</button>
-          <button>√</button>
+          <button (click)="ope('**')">^</button>
+          <button (click)="ope('%')">mod</button>
           <button (click)="set('.')">,</button>
+          <button>?</button>
         </div>
       </div>
     </form>
   </div>
 </div>
 
-<p>text: {{text}} - num1: {{num1}}</p>
+<p>text: {{text}} - num1: {{num1}} - num2: {{num2}} - operation: {{operation}}</p>
