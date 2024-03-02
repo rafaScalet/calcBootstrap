@@ -9,6 +9,7 @@ export class CalculatorComponent {
   num1: number = 0
   num2: number = 0
   result: any = 0
+  memory: string[] = []
   operation: string = ""
   text: string = ""
 
@@ -33,5 +34,9 @@ export class CalculatorComponent {
     this.result = 0
     this.operation = ""
     this.text = ""
+  }
+
+  bin(){
+    this.memory.push(this.num1 + this.operation + this.num2 + "= " + this.result)
   }
 }

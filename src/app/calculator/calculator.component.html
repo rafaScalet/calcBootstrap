@@ -33,7 +33,7 @@
           <button (click)="ope('**')">X^</button>
           <button (click)="ope('%')">mod</button>
           <button (click)="set('.')">,</button>
-          <button>?</button>
+          <button (click)="bin()">?</button>
         </div>
       </div>
     </form>
@@ -41,3 +41,10 @@
 </div>
 
 <p>text: {{text}} - num1: {{num1}} - num2: {{num2}} - operation: {{operation}} - result: {{result}}</p>
+
+<div>
+  <p>memory</p>
+  <ul>
+    <li *ngFor="let item of memory">{{ item }}</li>
+  </ul>
+</div>
