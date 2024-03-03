@@ -1,50 +1,51 @@
-<div class="content">
-  <div class="calculator">
-    <form>
+<div class="container text-center">
+  <div class="row row-cols-2">
+    <div class="calculator">
       <div class="display">
-        <p></p>
-      </div>
-      <div class="button-group">
-        <div>
-          <button (click)="set('1')">1</button>
-          <button (click)="set('2')">2</button>
-          <button (click)="set('3')">3</button>
-          <button (click)="ope('+')">+</button>
-        </div>
-        <div>
-          <button (click)="set('4')">4</button>
-          <button (click)="set('5')">5</button>
-          <button (click)="set('6')">6</button>
-          <button (click)="ope('-')">-</button>
-        </div>
-        <div>
-          <button (click)="set('7')">7</button>
-          <button (click)="set('8')">8</button>
-          <button (click)="set('9')">9</button>
-          <button (click)="ope('*')">x</button>
-        </div>
-        <div>
-          <button (click)="clear()">Ce</button>
-          <button (click)="set('0')">0</button>
-          <button (click)="calc()">=</button>
-          <button (click)="ope('/')">/</button>
-        </div>
-        <div>
-          <button (click)="ope('**')">X^</button>
-          <button (click)="ope('%')">mod</button>
-          <button (click)="set('.')">,</button>
-          <button>?</button>
+        <div class="card">
+          <div class="card-body">
+            <p>{{num2}} {{operation}} {{num1}} = {{result}}</p>
+          </div>
         </div>
       </div>
-    </form>
+      <div>
+        <div>
+          <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('1')">1</button>
+          <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('2')">2</button>
+          <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('3')">3</button>
+          <button style="width: 18%; margin: 1%" type="button" class="btn btn-danger" (click)="clear()">Ce</button>
+        </div>
+        <div>
+          <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('4')">4</button>
+          <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('5')">5</button>
+          <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('6')">6</button>
+          <button style="width: 18%; margin: 1%" type="button" class="btn btn-secondary" (click)="ope('+')">+</button>
+        </div>
+        <div>
+          <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('7')">7</button>
+          <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('8')">8</button>
+          <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('9')">9</button>
+          <button style="width: 18%; margin: 1%" type="button" class="btn btn-secondary" (click)="ope('-')">-</button>
+        </div>
+        <div>
+          <button style="width: 18%; margin: 1%" type="button" type="button" class="btn btn-light" (click)="set('.')">,</button>
+          <button style="width: 18%; margin: 1%" type="button" type="button" class="btn btn-light" (click)="set('0')">0</button>
+          <button style="width: 18%; margin: 1%" type="button" type="button" class="btn btn-secondary" (click)="calc()">=</button>
+          <button style="width: 18%; margin: 1%" type="button" class="btn btn-secondary" (click)="ope('*')">*</button>
+        </div>
+        <div>
+          <button style="width: 18%; margin: 1%" type="button" class="btn btn-danger">?</button>
+          <button style="width: 18%; margin: 1%" type="button" class="btn btn-secondary" (click)="ope('**')">^</button>
+          <button style="width: 18%; margin: 1%" type="button" class="btn btn-secondary" (click)="ope('%')">%</button>
+          <button style="width: 18%; margin: 1%" type="button" class="btn btn-secondary" (click)="ope('/')">/</button>
+        </div>
+      </div>
+    </div>
+    <div class="memory">
+      <p>memory</p>
+      <ul>
+        <li *ngFor="let item of memory">{{ item }}</li>
+      </ul>
+    </div>
   </div>
-</div>
-
-<p>text: {{text}} - num1: {{num1}} - num2: {{num2}} - operation: {{operation}} - result: {{result}}</p>
-
-<div>
-  <p>memory</p>
-  <ul>
-    <li *ngFor="let item of memory">{{ item }}</li>
-  </ul>
 </div>

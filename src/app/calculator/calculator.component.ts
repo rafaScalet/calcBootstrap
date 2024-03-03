@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class CalculatorComponent {
   num1: number = 0;
   num2: number = 0;
-  result: any = 0;
+  result: number = 0;
   memory: string[] = [];
   operation: string = '';
   text: string = '';
@@ -22,11 +22,12 @@ export class CalculatorComponent {
     this.operation = operation;
     this.num2 = this.num1;
     this.text = '';
+    this.num1 = 0;
   }
 
   calc() {
-    this.result = eval(this.num1 + this.operation + this.num2);
-    this.memory.push(this.num1 + this.operation + this.num2 + '= ' + this.result);
+    this.result = eval(this.num2 + this.operation + this.num1);
+    this.memory.push(this.num2 + this.operation + this.num1 + '= ' + this.result);
     this.text = '';
   }
 
