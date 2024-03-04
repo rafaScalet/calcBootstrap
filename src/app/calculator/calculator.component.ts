@@ -27,7 +27,7 @@ export class CalculatorComponent {
 
   calc() {
     this.result = eval(this.num2 + this.operation + this.num1);
-    this.memory.push(this.num2 + this.operation + this.num1 + '= ' + this.result);
+    this.memory.push(this.num2 + " " + this.operation + " " + this.num1 + ' = ' + this.result);
     this.text = '';
   }
 

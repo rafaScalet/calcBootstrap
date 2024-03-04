@@ -1,51 +1,55 @@
 <div class="container text-center">
   <div class="row row-cols-2">
-    <div class="calculator">
-      <div class="display">
-        <div class="card">
-          <div class="card-body">
-            <p>{{num2}} {{operation}} {{num1}} = {{result}}</p>
+    <div class="card">
+      <div class="calculator">
+        <div class="display">
+          <div class="card">
+            <div class="card-body">
+              <p>{{num2}} {{operation}} {{num1}} = {{result}}</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('1')">1</button>
+            <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('2')">2</button>
+            <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('3')">3</button>
+            <button style="width: 18%; margin: 1%" type="button" class="btn btn-danger" (click)="clear()">Ce</button>
+          </div>
+          <div>
+            <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('4')">4</button>
+            <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('5')">5</button>
+            <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('6')">6</button>
+            <button style="width: 18%; margin: 1%" type="button" class="btn btn-secondary" (click)="ope('+')">+</button>
+          </div>
+          <div>
+            <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('7')">7</button>
+            <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('8')">8</button>
+            <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('9')">9</button>
+            <button style="width: 18%; margin: 1%" type="button" class="btn btn-secondary" (click)="ope('-')">-</button>
+          </div>
+          <div>
+            <button style="width: 18%; margin: 1%" type="button" type="button" class="btn btn-light" (click)="set('.')">,</button>
+            <button style="width: 18%; margin: 1%" type="button" type="button" class="btn btn-light" (click)="set('0')">0</button>
+            <button style="width: 18%; margin: 1%" type="button" type="button" class="btn btn-secondary" (click)="calc()">=</button>
+            <button style="width: 18%; margin: 1%" type="button" class="btn btn-secondary" (click)="ope('*')">*</button>
+          </div>
+          <div>
+            <button style="width: 18%; margin: 1%" type="button" class="btn btn-danger">?</button>
+            <button style="width: 18%; margin: 1%" type="button" class="btn btn-secondary" (click)="ope('**')">X^</button>
+            <button style="width: 18%; margin: 1%" type="button" class="btn btn-secondary" (click)="ope('%')">%</button>
+            <button style="width: 18%; margin: 1%" type="button" class="btn btn-secondary" (click)="ope('/')">/</button>
           </div>
         </div>
       </div>
-      <div>
-        <div>
-          <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('1')">1</button>
-          <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('2')">2</button>
-          <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('3')">3</button>
-          <button style="width: 18%; margin: 1%" type="button" class="btn btn-danger" (click)="clear()">Ce</button>
-        </div>
-        <div>
-          <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('4')">4</button>
-          <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('5')">5</button>
-          <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('6')">6</button>
-          <button style="width: 18%; margin: 1%" type="button" class="btn btn-secondary" (click)="ope('+')">+</button>
-        </div>
-        <div>
-          <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('7')">7</button>
-          <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('8')">8</button>
-          <button style="width: 18%; margin: 1%" type="button" class="btn btn-light" (click)="set('9')">9</button>
-          <button style="width: 18%; margin: 1%" type="button" class="btn btn-secondary" (click)="ope('-')">-</button>
-        </div>
-        <div>
-          <button style="width: 18%; margin: 1%" type="button" type="button" class="btn btn-light" (click)="set('.')">,</button>
-          <button style="width: 18%; margin: 1%" type="button" type="button" class="btn btn-light" (click)="set('0')">0</button>
-          <button style="width: 18%; margin: 1%" type="button" type="button" class="btn btn-secondary" (click)="calc()">=</button>
-          <button style="width: 18%; margin: 1%" type="button" class="btn btn-secondary" (click)="ope('*')">*</button>
-        </div>
-        <div>
-          <button style="width: 18%; margin: 1%" type="button" class="btn btn-danger">?</button>
-          <button style="width: 18%; margin: 1%" type="button" class="btn btn-secondary" (click)="ope('**')">^</button>
-          <button style="width: 18%; margin: 1%" type="button" class="btn btn-secondary" (click)="ope('%')">%</button>
-          <button style="width: 18%; margin: 1%" type="button" class="btn btn-secondary" (click)="ope('/')">/</button>
-        </div>
-      </div>
     </div>
-    <div class="memory">
-      <p>memory</p>
-      <ul>
-        <li *ngFor="let item of memory">{{ item }}</li>
-      </ul>
+    <div class="card">
+      <div class="memory">
+        <p>MEMORY</p>
+        <ul>
+          <li *ngFor="let item of memory">{{ item }}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
