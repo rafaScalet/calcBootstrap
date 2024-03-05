@@ -10,7 +10,7 @@ export class CalculatorComponent {
   num2: number = 0;
   result: number = 0;
   memory: string[] = [];
-  operation: string = '';
+  operation: string = '?';
   text: string = '';
 
   set(text: string = '') {
@@ -32,10 +32,18 @@ export class CalculatorComponent {
   }
 
   clear() {
+    if(this.num1 == 0){
+      this.memory = [];
+    }
     this.num1 = 0;
     this.num2 = 0;
     this.result = 0;
     this.operation = '';
     this.text = '';
+  }
+
+  esp(num: number = 0){
+    num = Math.floor(Math.random() * (this.num2 - this.num1 + 1)) + this.num1;
+    alert("o número sorteado foi: " + num);
   }
 }
